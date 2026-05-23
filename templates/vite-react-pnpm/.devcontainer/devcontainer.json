@@ -1,0 +1,14 @@
+{
+  "name": "${localWorkspaceFolderBasename}",
+  "image": "ghcr.io/ideon/devcontainers/node-pnpm:latest"
+
+  // Everything else (mounts, postCreateCommand, workspaceFolder) is embedded
+  // in the image via its devcontainer.metadata label. Override anything here
+  // if your project needs project-specific adjustments, e.g.:
+  //
+  // "features": {
+  //   "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  // },
+  //
+  // "postCreateCommand": "bash /usr/local/share/devcontainer-init.sh && <extra>"
+}
