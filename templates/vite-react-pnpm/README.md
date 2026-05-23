@@ -37,7 +37,7 @@ no project-side config files needed.
 
 | Concern | How it's handled |
 |---|---|
-| `workspaceFolder` | `/workspace` |
+| `workspaceFolder` | `/workspaces/<project-name>` |
 | `node_modules` off FUSE | Named volume `<project>-node-modules` at `/home/node/node_modules` |
 | pnpm store | Nested inside the `node_modules` volume as `.pnpm-store/` |
 | Symlinks in workspace | `init.sh` (baked into image at `/usr/local/share/devcontainer-init.sh`) |

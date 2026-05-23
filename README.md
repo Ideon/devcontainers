@@ -39,6 +39,26 @@ Drop-in `.devcontainer/` scaffolding for common project types.
 - **pnpm version per-project.** The image provides `corepack`; each project pins
   its own pnpm version via `package.json#packageManager`. No conflicts.
 
+## Using a template
+
+Run the setup script from anywhere — it auto-discovers templates and drops
+`.devcontainer/` into your project:
+
+```sh
+# Interactive template picker
+scripts/new-project.sh ~/Projects/my-app
+
+# Skip the menu
+scripts/new-project.sh ~/Projects/my-app --template vite-react-pnpm
+```
+
+The script will:
+1. Copy `.devcontainer/` from the chosen template into the target project.
+2. Add `.devcontainer/local.env` to `.gitignore` (creating one if needed).
+3. Print a short "what next" checklist.
+
+Use `--force` to overwrite an existing `.devcontainer/` directory.
+
 ## Adding a new image
 
 1. Create `images/<name>/Dockerfile`.

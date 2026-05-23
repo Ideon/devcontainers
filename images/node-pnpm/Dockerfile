@@ -41,7 +41,7 @@ VOLUME ["/home/node/node_modules"]
 #   ${localWorkspaceFolderBasename}  — folder name of the opened project
 #   ${env:HOME}                      — host user's home directory
 LABEL devcontainer.metadata='[{ \
-  "workspaceFolder": "/workspace", \
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}", \
   "postCreateCommand": "bash /usr/local/share/devcontainer-init.sh", \
   "initializeCommand": "mkdir -p ${localWorkspaceFolder}/.devcontainer && touch ${localWorkspaceFolder}/.devcontainer/local.env", \
   "runArgs": ["--privileged", "--env-file", "${localWorkspaceFolder}/.devcontainer/local.env"], \
